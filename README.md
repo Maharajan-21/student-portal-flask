@@ -12,14 +12,25 @@ A Student Portal web application developed using **Python Flask**, **SQLite**, *
 
 ## 📸 Screenshots
 
-## 🏠 Home Page
+### 🏠 Home Page
 
 ![Home Page](screenshots/home.png)
 
-## 👨‍🎓 Student Dashboard
+### 👨‍🎓 Student Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
----
+
+### 👨‍💼 Admin Dashboard
+
+![Admin Dashboard](screenshots/admin.png)
+
+### 👥 Students List
+
+![Students](screenshots/students.png)
+
+### 📄 Report Card
+
+![Report](screenshots/report.png)
 
 ## ✨ Features
 
