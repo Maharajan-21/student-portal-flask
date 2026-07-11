@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+</head>
+<body>
+<div class="navbar">
+
+<h2>🎓 Student Portal</h2>
+
+<div>
+
+<a href="/">Home</a>
+
+<a href="/students">Students</a>
+
+<a href="/search">Search</a>
+
+<a href="/logout">Logout</a>
+
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+
+{% if student[7] %}
+    <img src="{{ url_for('static', filename='images/' + student[7]) }}"
+         width="150" height="150">
+{% else %}
+    <img src="{{ url_for('static', filename='images/default.jpg') }}"
+         width="150" height="150">
+{% endif %}
+
+<h2>Welcome {{student[1]}}</h2>
+
+<p><b>Department :</b> {{student[2]}}</p>
+
+<p><b>Marks :</b> {{student[4]}}</p>
+
+<p><b>Attendance :</b> {{student[5]}}%</p>
+
+<p><b>CGPA :</b> {{student[6]}}</p>
+
+<a href="/edit">
+<button>Edit Profile</button>
+</a>
+
+<a href="{{ url_for('report') }}">
+    <button>View Report Card</button>
+</a>
+
+
+</div>
+
+</div>
+{% if student[4] >= 50 %}
+<p class="pass">✅ PASS</p>
+{% else %}
+<p class="fail">❌ FAIL</p>
+{% endif %}
+
+</body>
+</html>
